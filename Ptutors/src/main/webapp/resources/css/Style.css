@@ -1,0 +1,219 @@
+             #image {
+                position: relative;
+                width: 50%;
+            }
+
+            .image {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            #image:hover .image {
+                opacity: 0.3;
+            }
+
+            #image:hover .middle {
+                opacity: 1;
+            }
+
+            .text {
+                border-radius: 10px;
+                color: navy;
+                font-size: 16px;
+
+            }
+
+            b#heading2:hover{
+                color: whitesmoke;
+            }
+            b#menu:hover{
+                color: chocolate; 
+            }
+              li#menu:hover{
+                
+                color: chocolate; 
+            }
+            span#heading1:hover{
+                color: darksalmon;
+            }
+            span#emailword:hover{
+                color: darksalmon; 
+
+            }
+            a#email:hover{
+                color: whitesmoke;
+
+            }
+            b#quote:hover{
+                color: indianred; 
+
+            }
+            a#btn1:hover{
+                color: darkslateblue;
+            }
+            a#btn2:hover{
+                color: darkslateblue;
+            }
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+                border-radius: 15px;
+                width: 6cm;
+                height: 1cm;
+                border-radius: 15px;
+            }
+            input[type=email], input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+                border-radius: 15px;
+                width: 6cm;
+            }
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+                border-radius: 15px;
+                width: 6cm;
+            }
+            input[type=email]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+                border-radius: 15px;
+                width: 6cm;
+            }
+            .state{
+                background-color: #ddd;
+                outline: none;
+                border-radius: 15px;
+                width: 8cm;
+            }
+            .state{
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                display: inline-block;
+                border: none;
+                background: #f1f1f1;
+                border-radius: 15px;
+                width: 8cm;
+            }
+            hr {
+                border: 1px solid #f1f1f1;
+                margin-bottom: 25px;
+            }
+           .registerbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+            .registerbtn:hover {
+                opacity: 1;
+            }
+                      #image {
+                position: relative;
+                width: 50%;
+            }
+
+            .image {
+                opacity: 1;
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: .5s ease;
+                backface-visibility: hidden;
+            }
+
+            .middle {
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            #image:hover .image {
+                opacity: 0.3;
+            }
+
+            #image:hover .middle {
+                opacity: 1;
+            }
+
+            .text {
+                border-radius: 10px;
+                color: navy;
+                font-size: 16px;
+
+            }
+
+            b#heading2:hover{
+                color: whitesmoke;
+            }
+            span#heading1:hover{
+                color: darksalmon;
+            }
+            span#emailword:hover{
+                color: darksalmon; 
+
+            }
+           
+            a#email:hover{
+                
+                color: whitesmoke;
+
+            }
+            b#quote:hover{
+                color: indianred; 
+
+            }
+            a#btn1:hover{
+                color: darkslateblue;
+            }
+            a#btn2:hover{
+                color: darkslateblue;
+            }
+            #textarea{
+               background: #f1f1f1;
+               border-radius: 10px;
+               font-family: serif; 
+                
+            }
+            .header {
+ 
+}
+
+
+
+.sticky {
+  
+}
