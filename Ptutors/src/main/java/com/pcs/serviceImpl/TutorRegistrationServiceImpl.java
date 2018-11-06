@@ -18,7 +18,7 @@ public class TutorRegistrationServiceImpl implements TutorRegistrationService {
 	}
 
 	public String tutorLogin(String email, String password) {
-		// TODO Auto-generated method stub
+
 		return trDao.tutorLogin(email,password);
 	}
 

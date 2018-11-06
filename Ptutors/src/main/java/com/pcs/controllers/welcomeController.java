@@ -30,7 +30,7 @@ public class welcomeController {
 
 	@RequestMapping(value="/student_reg1")
 	public String studentReg1(){
-		return "student_reg1";
+		return "studentReg";
 	}
 	@RequestMapping(value="/center_login")
 	public String centerLogin(){

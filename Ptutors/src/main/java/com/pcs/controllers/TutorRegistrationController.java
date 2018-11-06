@@ -10,27 +10,22 @@ import com.pcs.entities.TutorRegistration;
 import com.pcs.service.TutorRegistrationService;
 
 @Controller
-public class TutorRegistrationController 
-{
+public class TutorRegistrationController {
 	@Autowired
 	TutorRegistrationService trs;
 
 	@PostMapping(value = "/tutorRegistration")
-	public String tutorReg(@ModelAttribute("tr") TutorRegistration tr)
-	{
+	public String tutorReg(@ModelAttribute("tr") TutorRegistration tr) {
 		trs.insertData(tr);
 		return "tutor_login";
 	}
+
 	@PostMapping(value = "/tutorLogin")
-	public String tutorLogin(@RequestParam("email") String email , @RequestParam("password") String password)
-	{
-		String str=trs.tutorLogin(email, password);
-		if(str!=null)
-		{
+	public String tutorLogin(@RequestParam("email") String email, @RequestParam("password") String password) {
+		String str = trs.tutorLogin(email, password);
+		if (str != null) {
 			return "institute";
-		}
-		else
+		} else
 			return "tutor_login";
 	}
 }
-
