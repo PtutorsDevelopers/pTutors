@@ -1,16 +1,21 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 
- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-       <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/Style.css"/> 
-       
-       <title>Ptutors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/resources/css/Style.css" />
+
+<title>Ptutors</title>
 <style>
 * {
 	box-sizing: border-box;
@@ -27,7 +32,6 @@ body {
 	padding: 40px;
 	width: 50%;
 	min-width: 300px;
-	
 }
 
 h1 {
@@ -40,7 +44,6 @@ input {
 	font-size: 21px;
 	font-family: Raleway;
 	border: 2px solid #aaaaaa;
-
 }
 
 /* Mark input boxes that gets an error on validation: */
@@ -91,174 +94,254 @@ button:hover {
 .step.finish {
 	background-color: #4CAF50;
 }
+  .error {
+      color: #EF1313;
+      font-style: italic;
+  }
 </style>
- <body style="background:lightblue" >
+<body style="background: lightblue">
 
-        <div class="container-fluid" style="font-size:15px;background: cadetblue;" onmouseover="this.style.backgroundColor = '#6D7C77'" onmouseout="this.style.backgroundColor = 'cadetblue'">
-            <div class="row" style="border-radius: 5px;">
-                <div class="col-lg-1">
+	<div class="container-fluid"
+		style="font-size: 15px; background: cadetblue;"
+		onmouseover="this.style.backgroundColor = '#6D7C77'"
+		onmouseout="this.style.backgroundColor = 'cadetblue'">
+		<div class="row" style="border-radius: 5px;">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-4">
+				<p style="margin-top: 8px; font-family: cursive">
+					<b><span id="heading1">A venture of&nbsp;&nbsp;&nbsp;</span></b><i
+						style="font-family: cursive; font-size: 15px;"><b
+						id="heading2">PCS Global Pvt. Ltd.</b></i>
+				</p>
+			</div>
+			<div class="col-lg-4"></div>
+			<div class="col-lg-3">
+				<p style="margin-top: 8px; font-family: cursive">
+					<b><span id="emailword">Email :&nbsp;</span></b><i
+						style="font-family: cursive; font-size: 15px;"><b><a
+							id="email" style="color: chocolate;"
+							onmouseover="this.style.color = 'whitesmoke'"
+							onmouseout="this.style.color = 'chocolate'">helpdesk@ptutors.in</a></b></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row"
+			style="font-size: 15px; background: white; border-radius: 5px;">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-2" id="image">
+				<img src="logo/logon.gif" alt="" />
+				<div class="middle">
+					<div class="text">
+						<img src="logo/logon.gif"
+							style="border-radius: 10px; background: white; height: 2cm; width: 8cm;"
+							alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<p style="color: navy; font-style: oblique; margin-top: 15px;">
+					<b id="quote">"A good teacher must be able to put himself in
+						the place of<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; those who find
+						learning hard"
+					</b>
+				</p>
+			</div>
 
-                </div>
-                <div class="col-lg-4">
-                    <p  style="margin-top:8px;font-family: cursive"><b><span id="heading1">A venture of&nbsp;&nbsp;&nbsp;</span></b><i style="font-family: cursive;font-size: 15px;"><b id="heading2">PCS Global Pvt. Ltd.</b></i></p>    
-                </div>
-                <div class="col-lg-4">
-                </div>
-                <div class="col-lg-3">
-                    <p style="margin-top:8px;font-family: cursive"><b><span id="emailword">Email :&nbsp;</span></b><i style="font-family: cursive;font-size: 15px;"><b ><a id="email" style="color: chocolate;" onmouseover="this.style.color = 'whitesmoke'" onmouseout="this.style.color = 'chocolate'">helpdesk@ptutors.in</a></b></i></p>    
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row" style="font-size:15px;background: white;border-radius: 5px;" >
-                <div class="col-lg-1">
+		</div>
 
-                </div>
-                <div class="col-lg-2" id="image" >
-                    <img src="logo/logon.gif" alt=""/>
-                    <div class="middle">
-                        <div class="text">
-                            <img src="logo/logon.gif"  style="border-radius: 10px;background:white;height: 2cm;width: 8cm;" alt=""/></div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <p style="color: navy;font-style: oblique;margin-top: 15px;"><b id="quote">"A good teacher must be able to put himself in 
-                            the place of<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; those who find learning hard"</b></p>
-                </div>
+		<div class="row">
 
-            </div>
+			<nav class="navbar navbar-default"
+				style="margin-top: 0px;margin-bottom: 0px;margin-right: 0px;margin-left: 0px;background: cadetblue;height: fit-content"
+				onmouseover="this.style.backgroundColor = '#75B19D'"
+				onmouseout="this.style.backgroundColor = 'cadetblue'">
+			<div class="container-fluid">
 
-            <div class="row">
-
-                <nav class="navbar navbar-default" style="margin-top: 0px;margin-bottom: 0px;margin-right: 0px;margin-left: 0px;background: cadetblue;height: fit-content" onmouseover="this.style.backgroundColor = '#75B19D'" onmouseout="this.style.backgroundColor = 'cadetblue'">
-                    <div class="container-fluid">
-
-                        <ul class="nav navbar-nav" style="font-family: monospace;font-size: 20px;color: whitesmoke;">
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''" style="margin-left: 75px;"><a href="index"><b id="menu" style="color: whitesmoke;">Home</b></a></li>
-                            <li id="menu" onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a  href="#"><b id="menu" style="color: whitesmoke;">Tutor</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="student"><b id="menu" style="color: whitesmoke;">Student</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="institute"><b id="menu" style="color: whitesmoke;">Institute</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">Job</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="academia"><b id="menu" style="color: whitesmoke;">Academia</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">CCA</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">Books</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">Payment</b></a></li> 
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">Classified</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">Help</b></a></li>
-                            <li onmouseover="this.style.backgroundColor = '#5E616C'" onmouseout="this.style.backgroundColor = ''"><a href="#"><b id="menu" style="color: whitesmoke;">Contact Us</b></a></li>
-
-
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-<br>
-<br>
-
-	<h1 style="color: darkgreen;"><% if(null != request.getAttribute("message")){ %>		
-				  <%=(String) request.getAttribute("message") %>
-					<%} %>
+				<ul class="nav navbar-nav"
+					style="font-family: monospace; font-size: 20px; color: whitesmoke;">
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"
+						style="margin-left: 75px;"><a href="index"><b id="menu"
+							style="color: whitesmoke;">Home</b></a></li>
+					<li id="menu" onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Tutor</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a
+						href="student"><b id="menu" style="color: whitesmoke;">Student</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a
+						href="institute"><b id="menu" style="color: whitesmoke;">Institute</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Job</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a
+						href="academia"><b id="menu" style="color: whitesmoke;">Academia</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">CCA</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Books</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Payment</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Classified</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Help</b></a></li>
+					<li onmouseover="this.style.backgroundColor = '#5E616C'"
+						onmouseout="this.style.backgroundColor = ''"><a href="#"><b
+							id="menu" style="color: whitesmoke;">Contact Us</b></a></li>
 
 
-</h1>
-<h1><b style="color: teal;">Tutor Registration...</b></h1>
-	<form id="regForm" action="tutorRegistration" method="post">
-		
+				</ul>
+			</div>
+			</nav>
+		</div>
+	</div>
+	<br>
+	<br>
+
+	<h1 style="color: darkgreen;">
+		<%
+			if (null != request.getAttribute("message")) {
+		%>
+		<%=(String) request.getAttribute("message")%>
+		<%
+			}
+		%>
+
+
+	</h1>
+	<h1>
+		<b style="color: teal;">Tutor Registration...</b>
+	</h1>
+	<form:form id="regForm" action="tutorRegistration" method="post" commandName="tutorReg" modelAttribute="tutorReg">
+
 		<!-- One "tab" for each step in the form: -->
 		<div class="tab">
-		<h2><b>Credential Details:</b></h2>
-		<br>
-			
+			<h2>
+				<b>Credential Details:</b>
+			</h2>
+			<br>
+
 			<center style="margin-left: 10px;">
-			<input type="text" style="font-family: serif; margin-top: 20px; width:8cm;"
-							placeholder="Email" name="email"
-							required> <br> 
-							
-							<input type="password"
-							style="font-family: serif; width:8cm;" placeholder="Password"
-							name="password" required> <br>
-								<input type="text"
-							style="font-family: serif;width:8cm;" placeholder="Confirm Password"
-							name="Cpassword" required> <br>
-							</center>
+				<form:input type="text" style="font-family: serif; margin-top: 20px; width:8cm;"
+					placeholder="Email" path="email" />
+				<form:errors path="email"></form:errors>
+				<br>
+				<form:input type="password" style="font-family: serif; width:8cm;"
+					placeholder="Password" path="password" />
+				<form:errors path="password"></form:errors>
+				<br>
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="Confirm Password" path="Cpassword"  />
+				<form:errors path="Cpassword"></form:errors>
+				<br>
+			</center>
 		</div>
-		
+
 		<div class="tab">
-			<h2><b>Personal Details:</b></h2>
-		<br>
+			<h2>
+				<b>Personal Details:</b>
+			</h2>
+			<br>
 			<center>
-						<input type="text" style="font-family: serif;width:8cm; margin-top: 20px;"
-							placeholder="Name" name="name" required> <br>
-							
-							 <input type="text" style="font-family: serif;width:8cm;"
-							placeholder="DD-MM-YYYY" name="dob" required> <br>
-						<select class="form-control" name="gender"
-							style="border-radius: 10px; background: #f1f1f1; font-size:21px; width: 8cm;height:1cm;">
-							<option>Gender</option>
-							<option>Male</option>
-							<option>Female</option>
-							<option>Transgender</option>
-						</select> <br>
-						 <input type="text"  style="font-family: serif;width:8cm;"
-							placeholder="Address Line 1" name="address1" required>
-						<br>
-						<input type="text"  style="font-family: serif;width:8cm;"
-							placeholder="Address Line 2" name="address2" required>
-						<br>
-						<input type="text"  style="font-family: serif;width:8cm;"
-							placeholder="Address Line 3" name="address3" required>
-						<br>
-						<input type="text"  style="font-family: serif;width:8cm;"
-							placeholder="Country" name="country" value="India" required>
-						<br>
-						<select class="form-control" name="state"
-							style="border-radius: 10px; background: #f1f1f1; font-size:21px; width: 8cm;height:1cm;">
-						<option value="">------------Select State------------</option>
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                        <option value="Daman and Diu">Daman and Diu</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Orissa">Orissa</option>
-                        <option value="Pondicherry">Pondicherry</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttaranchal">Uttaranchal</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="West Bengal">West Bengal</option>
-						</select> <br>
-						 <input type="text" style="font-family: serif;width:8cm;"
-							placeholder=" Pin Code" name="pincode" required>
-						<br> <input type="text" style="font-family: serif;width:8cm;"
-							placeholder="Contact No" name="contactNo" required> <br>
-						
-					</center>
+				<form:input type="text" style="font-family: serif;width:8cm; margin-top: 20px;"
+					placeholder="Name" path="name"  />
+				<form:errors path="name"></form:errors>
+				<br>
+
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="DD-MM-YYYY" path="dob" />
+				<form:errors path="dob"></form:errors>
+				<br>
+				<form:select class="form-control" path="gender"
+					style="border-radius: 10px; background: #f1f1f1; font-size:21px; width: 8cm;height:1cm;">
+					<option>Gender</option>
+					<option>Male</option>
+					<option>Female</option>
+					<option>Transgender</option>
+				</form:select>
+				<form:errors path="gender"></form:errors>
+				<br>
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="Address Line 1" path="address1" />
+				<form:errors path="address1"></form:errors>
+				<br>
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="Address Line 2" path="address2" />
+				<form:errors path="address2"></form:errors>
+				<br>
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="Address Line 3" path="address3" />
+				<form:errors path="address3"></form:errors>
+				<br>
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="Country" path="country" value="India" />
+				<form:errors path="country"></form:errors>
+				<br>
+				<form:select class="form-control" path="state"
+					style="border-radius: 10px; background: #f1f1f1; font-size:21px; width: 8cm;height:1cm;">
+					<option value="">------------Select State------------</option>
+					<option value="Andaman and Nicobar Islands">Andaman & Nicobar Islands</option>
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+					<option value="Assam">Assam</option>
+					<option value="Bihar">Bihar</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Chhattisgarh">Chhattisgarh</option>
+					<option value="Dadra and Nagar Haveli">Dadra & Nagar Haveli</option>
+					<option value="Daman and Diu">Daman and Diu</option>
+					<option value="Delhi">Delhi</option>
+					<option value="Goa">Goa</option>
+					<option value="Gujarat">Gujarat</option>
+					<option value="Haryana">Haryana</option>
+					<option value="Himachal Pradesh">Himachal Pradesh</option>
+					<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+					<option value="Jharkhand">Jharkhand</option>
+					<option value="Karnataka">Karnataka</option>
+					<option value="Kerala">Kerala</option>
+					<option value="Lakshadweep">Lakshadweep</option>
+					<option value="Madhya Pradesh">Madhya Pradesh</option>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Manipur">Manipur</option>
+					<option value="Meghalaya">Meghalaya</option>
+					<option value="Mizoram">Mizoram</option>
+					<option value="Nagaland">Nagaland</option>
+					<option value="Orissa">Orissa</option>
+					<option value="Pondicherry">Pondicherry</option>
+					<option value="Punjab">Punjab</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Sikkim">Sikkim</option>
+					<option value="Tamil Nadu">Tamil Nadu</option>
+					<option value="Tripura">Tripura</option>
+					<option value="Uttaranchal">Uttaranchal</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
+					<option value="West Bengal">West Bengal</option>
+				</form:select>
+				<form:errors path="state"></form:errors>
+				<br>
+
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder=" Pin Code" path="pincode" />
+				<form:errors path="pincode"></form:errors>
+				<br>
+
+				<form:input type="text" style="font-family: serif;width:8cm;"
+					placeholder="Contact No" path="contactNo" />
+				<form:errors path="contactNo"></form:errors>
+				<br>
+
+			</center>
 		</div>
-		
+
 		<div style="overflow: auto;">
 			<div style="float: right;">
 				<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -267,9 +350,9 @@ button:hover {
 		</div>
 		<!-- Circles which indicates the steps of the form: -->
 		<div style="text-align: center; margin-top: 40px;">
-			<span class="step"></span> <span class="step"></span> 
+			<span class="step"></span> <span class="step"></span>
 		</div>
-	</form>
+	</form:form>
 
 	<script>
 		var currentTab = 0; // Current tab is set to be the first tab (0)
