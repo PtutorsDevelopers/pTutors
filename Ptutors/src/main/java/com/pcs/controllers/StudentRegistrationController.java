@@ -12,7 +12,7 @@ import com.pcs.service.StudentRegistrationService;
 @Controller
 public class StudentRegistrationController {
 	
-	// Mriganka
+	// Mriganka Koley
 
 	@Autowired
 	StudentRegistrationService srs;
