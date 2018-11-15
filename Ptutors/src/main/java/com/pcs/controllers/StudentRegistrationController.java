@@ -14,6 +14,8 @@ public class StudentRegistrationController {
 
 	@Autowired
 	StudentRegistrationService srs;
+	
+	// Govind Testing
 
 	@PostMapping(value = "/studentRegistration")
 	public String studentReg(@ModelAttribute("sr") StudentRegistration sr) {
