@@ -11,6 +11,8 @@ import com.pcs.service.StudentRegistrationService;
 
 @Controller
 public class StudentRegistrationController {
+	
+	// Mriganka
 
 	@Autowired
 	StudentRegistrationService srs;
